@@ -1,0 +1,38 @@
+/**
+* Clone Twitter
+*
+* HTML/CSS - Clonando layout do Twitter
+* usando FlexBox. Projeto do curso
+* de Flexbox da Rocketseat.
+*
+* @project Clone Twitter with Flexbox
+* @version 1.0
+* @package layout
+* @author @denilsoncamara
+*
+*/
+
+:root {
+  --color-primary: #e6ecf0;
+  --color-secondary: #3bb9e3;
+}
+
+/**
+* Estilos Globais
+*
+* @section global reset
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-size: 62.5%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
