@@ -76,6 +76,8 @@ button {
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   height: 46px;
+  position: relative;
+  z-index: 1;
 }
 
 .main-header .content {
@@ -127,4 +129,32 @@ button {
   height: 34px;
   margin: 0 15px;
   width: 34px;
+}
+
+/**
+* Estilos do Banner
+*
+* @section banner
+*/
+.banner {
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-secondary);
+  color: #fff;
+  display: flex;
+  height: 380px;
+  justify-content: center;
+}
+
+.banner > h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.banner > h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
 }
