@@ -99,7 +99,7 @@ button {
 
 .main-nav > .list-item {
   display: flex;
-  list-style-type: none;
+  list-style: none;
 }
 
 .main-nav > .list-item > .item + .item {
@@ -192,7 +192,7 @@ button {
 .bar ul {
   display: flex;
   height: 100%;
-  list-style-type: none;
+  list-style: none;
 }
 
 .bar ul > li {
@@ -242,4 +242,118 @@ button {
 .bar .actions a {
   align-items: center;
   display: flex;
+}
+
+/**
+* Estilos da seção perfil
+*
+* @aside profile
+*/
+
+.wrapper-content {
+  display: flex;
+}
+
+.wrapper-content > .profile {
+  width: 260px;
+}
+
+.profile > .avatar {
+  border: 5px solid #fff;
+  height: 200px;
+  margin-top: -130px;
+  width: 200px;
+}
+
+.profile > .name {
+  color: #1f2226;
+  font-size: 2.1rem;
+  margin-top: 10px;
+}
+
+.profile > .nick {
+  color: #53626c;
+  font-size: 1.4rem;
+}
+
+.profile > .bio {
+  color: #1f2226;
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+
+.profile > .bio > a {
+  color: var(--color-secondary);
+}
+
+.profile ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.profile > ul.list-item li {
+  color: var(--color-text);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile > ul.list-item li + li {
+  margin-top: 5px;
+}
+
+.profile li > a {
+  color: var(--color-secondary);
+}
+
+.profile > ul.list-item > li > img {
+  margin-right: 10px;
+}
+
+.profile > .widget {
+  margin-top: 20px;
+}
+
+.profile > .widget > strong {
+  align-items: center;
+  color: var(--color-secondary);
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.profile > .widget > strong > img {
+  margin-right: 5px;
+}
+
+.profile .followers > ul {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile .followers > ul > li {
+  background-color: #d0d5d9;
+  border-radius: 50%;
+  flex: 1 0 auto; /* shrink grow basis */
+  height: 45px;
+  margin: 0 5px 10px 0;
+  width: 45px;
+}
+
+.profile .images > ul {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile .images > ul > li {
+  background-color: #d0d5d9;
+  border-radius: 8px;
+  flex-shrink: 0;
+  height: 80px;
+  margin: 0 5px 5px 0;
+  width: 80px;
 }
