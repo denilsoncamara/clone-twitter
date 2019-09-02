@@ -16,6 +16,7 @@
   --color-primary: #e6ecf0;
   --color-secondary: #3bb9e3;
   --color-text: #667580;
+  --color-text-dark: #1f2226;
 }
 
 /**
@@ -247,74 +248,74 @@ button {
 /**
 * Estilos da seção perfil
 *
-* @aside profile
+* @aside profile content
 */
 
 .wrapper-content {
   display: flex;
 }
 
-.wrapper-content > .profile {
+.wrapper-content > .profile-content {
   width: 260px;
 }
 
-.profile > .avatar {
+.profile-content > .avatar {
   border: 5px solid #fff;
   height: 200px;
   margin-top: -130px;
   width: 200px;
 }
 
-.profile > .name {
-  color: #1f2226;
+.profile-content > .name {
+  color: var(--color-text-dark);
   font-size: 2.1rem;
   margin-top: 10px;
 }
 
-.profile > .nick {
+.profile-content > .nick {
   color: #53626c;
   font-size: 1.4rem;
 }
 
-.profile > .bio {
+.profile-content > .bio {
   color: #1f2226;
   font-size: 1.4rem;
   margin-top: 15px;
 }
 
-.profile > .bio > a {
+.profile-content > .bio > a {
   color: var(--color-secondary);
 }
 
-.profile ul {
+.profile-content ul {
   list-style: none;
   margin-top: 20px;
 }
 
-.profile > ul.list-item li {
+.profile-content > ul.list-item li {
   color: var(--color-text);
   font-size: 1.4rem;
   display: flex;
   align-items: center;
 }
 
-.profile > ul.list-item li + li {
+.profile-content > ul.list-item li + li {
   margin-top: 5px;
 }
 
-.profile li > a {
+.profile-content li > a {
   color: var(--color-secondary);
 }
 
-.profile > ul.list-item > li > img {
+.profile-content > ul.list-item > li > img {
   margin-right: 10px;
 }
 
-.profile > .widget {
+.profile-content > .widget {
   margin-top: 20px;
 }
 
-.profile > .widget > strong {
+.profile-content > .widget > strong {
   align-items: center;
   color: var(--color-secondary);
   display: flex;
@@ -322,18 +323,18 @@ button {
   font-weight: normal;
 }
 
-.profile > .widget > strong > img {
+.profile-content > .widget > strong > img {
   margin-right: 5px;
 }
 
-.profile .followers > ul {
+.profile-content .followers > ul {
   align-content: flex-start;
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
 }
 
-.profile .followers > ul > li {
+.profile-content .followers > ul > li {
   background-color: #d0d5d9;
   border-radius: 50%;
   flex: 1 0 auto; /* shrink grow basis */
@@ -342,18 +343,131 @@ button {
   width: 45px;
 }
 
-.profile .images > ul {
+.profile-content .images > ul {
   align-content: flex-start;
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
 }
 
-.profile .images > ul > li {
+.profile-content .images > ul > li {
   background-color: #d0d5d9;
   border-radius: 8px;
   flex-shrink: 0;
   height: 80px;
   margin: 0 5px 5px 0;
   width: 80px;
+}
+
+/**
+* Estilos da timeline
+*
+* @main timeline
+*/
+
+.wrapper-content > .timeline-content {
+  flex: 1;
+}
+
+/**
+* Estilos da sidebar widgets
+*
+* @aside widgets
+*/
+
+.wrapper-content > .widgets-content {
+  margin-top: 10px;
+  width: 290px;
+}
+
+.widgets-content > .widget {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.widgets-content > .widget > .title {
+  display: flex;
+  align-items: baseline;
+}
+
+.widgets-content > .widget > .title > strong {
+  color: var(--color-text-dark);
+  display: flex;
+  font-size: 1.8rem;
+}
+
+.widgets-content > .widget > .title > a {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  position: relative;
+  padding-left: 10px;
+}
+
+.widgets-content > .widget > .title > a::before {
+  border-radius: 50%;
+  background: #222;
+  content: '';
+  height: 2px;
+  left: 4px;
+  position: absolute;
+  top: 6px;
+  width: 2px;
+}
+
+.widgets-content > .follow > ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.widgets-content > .follow > ul > li {
+  border-bottom: 1px solid #ccd6dd;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.widgets-content > .follow > ul > li:last-child {
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.widgets-content > .follow .profile {
+  display: flex;
+  align-items: center;
+}
+
+.widgets-content .profile > .avatar {
+  height: 48px;
+  width: 48px;
+}
+
+.widgets-content .profile > .info {
+  flex-direction: column;
+  display: flex;
+  margin-left: 10px;
+}
+
+.widgets-content .profile > .info > strong {
+  color: var(--color-text-dark);
+  font-size: 1.4rem;
+}
+
+.widgets-content .profile > .info span {
+  color: #9a9a9a;
+  font-weight: normal;
+}
+
+.widgets-content .profile > .info > .button {
+  height: 27px;
+  margin-top: 4px;
+}
+
+.widgets-content > .follow .icon-close {
+  color: #ccd6dd;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
