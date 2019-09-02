@@ -429,12 +429,6 @@ button {
   padding-bottom: 10px;
 }
 
-.widgets-content > .follow > ul > li:last-child {
-  border: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .widgets-content > .follow .profile {
   display: flex;
   align-items: center;
@@ -470,4 +464,46 @@ button {
   color: #ccd6dd;
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+.widgets-content > .follow > .search-friends {
+  padding: 10px 0;
+}
+
+.widgets-content > .follow > .search-friends a {
+  align-items: center;
+  color: var(--color-secondary);
+  display: flex;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.widgets-content > .follow > .search-friends img {
+  color: var(--color-secondary);
+  margin-right: 10px;
+}
+
+.widgets-content > .trends > ul.list-item {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.widgets-content > .trends > ul.list-item > .item {
+  margin-bottom: 10px;
+}
+
+.widgets-content > .trends > ul.list-item a {
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.widgets-content > .copy {
+  padding: 5px 15px;
+}
+
+.widgets-content > .copy > p {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  line-height: 16px;
 }
