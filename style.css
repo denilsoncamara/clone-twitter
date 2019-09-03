@@ -17,6 +17,7 @@
   --color-secondary: #3bb9e3;
   --color-text: #667580;
   --color-text-dark: #1f2226;
+  --space-default: 10px;
 }
 
 /**
@@ -46,6 +47,8 @@ button {
 
 .avatar {
   border-radius: 50%;
+  height: 48px;
+  width: 48px;
 }
 
 .button {
@@ -278,7 +281,7 @@ button {
 }
 
 .profile-content > .bio {
-  color: #1f2226;
+  color: var(--color-text-dark);
   font-size: 1.4rem;
   margin-top: 15px;
 }
@@ -366,7 +369,84 @@ button {
 */
 
 .wrapper-content > .timeline-content {
+  background: #fff;
   flex: 1;
+  margin: calc(var(--space-default)) calc(var(--space-default) * 2) 0;
+}
+
+.timeline-content > nav {
+  border-bottom: 1px solid var(--color-primary);
+  padding: 10px 15px;
+}
+
+.timeline-content > nav > a {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.timeline-content > nav > a:first-child {
+  margin: 0;
+}
+
+.timeline-content > nav > a.active {
+  color: var(--color-text-dark);
+}
+
+.timeline-content > .tweets {
+  list-style: none;
+}
+
+.timeline-content > .tweets > li {
+  border-bottom: 1px solid var(--color-primary);
+  display: flex;
+  padding: 10px 15px;
+}
+
+.timeline-content > .tweets .info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content > .tweets .info strong {
+  color: var(--color-text-dark);
+  font-size: 1.4rem;
+}
+
+.timeline-content > .tweets .info > strong > span {
+  color: #7b8b9a;
+  font-size: 1.3rem;
+}
+
+.timeline-content > .tweets .info > p {
+  color: var(--color-text-dark);
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+.timeline-content > .tweets .info > .actions {
+  display: flex;
+  margin-top: 20px;
+}
+
+.timeline-content > .tweets .info > .actions > a {
+  align-items: center;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  text-decoration: none;
+}
+
+.timeline-content > .tweets .info > .actions > a + a {
+  margin-left: 30px;
+}
+
+.timeline-content > .tweets .info > .actions > a > img {
+  margin-right: 10px;
 }
 
 /**
@@ -376,14 +456,14 @@ button {
 */
 
 .wrapper-content > .widgets-content {
-  margin-top: 10px;
+  margin-top: var(--space-default);
   width: 290px;
 }
 
 .widgets-content > .widget {
   background-color: #fff;
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-default);
 }
 
 .widgets-content > .widget > .title {
@@ -432,11 +512,6 @@ button {
 .widgets-content > .follow .profile {
   display: flex;
   align-items: center;
-}
-
-.widgets-content .profile > .avatar {
-  height: 48px;
-  width: 48px;
 }
 
 .widgets-content .profile > .info {
